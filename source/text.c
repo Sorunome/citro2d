@@ -162,14 +162,7 @@ const char* C2D_TextFontParseLine(C2D_Text* text, C2D_Font font, C2D_TextBuf buf
 		p += units;
 
 		static const uint32_t break_chars[] = {
-			',', ':', '.', '"', '\'', '/',
-			0x3002, // 。
-			0xFF1F, // ？
-			0xFF01,	// ！
-			0x203C,	// ‼
-			0x2047,	// ⁇
-			0x2049,	// ⁉
-			0x2048,	// ⁈
+			'/', '-', '&',
 		};
 		bool found_break_char = false;
 		for (int i = 0; i < sizeof(break_chars) / sizeof(break_chars[0]); i++) {
